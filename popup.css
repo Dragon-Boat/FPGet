@@ -1,0 +1,108 @@
+.group {
+			position: relative;
+			margin-bottom: 8px;
+			/*margin-top: 8px;*/
+		}
+		input {
+			font-size: 18px;
+			padding: 10px 10px 10px 5px;
+			display: block;
+			width: 300px;
+			border: none;
+			border-bottom: 1px solid #757575;
+		}
+		input:focus {
+			outline: none;
+		}
+		label {
+			color:#999;
+			font-size: 18px;
+			font-weight: normal;
+			position: absolute;
+			pointer-events: none;
+			left: 5px;
+			top: 10px;
+			transition: 0.2s ease all;
+		}
+		input:focus ~ label, input:valid ~ label {
+			top: -20px;
+			font-size: 14px;
+			color: #5264AE;
+		}
+		.bar  { 
+			position:relative; display:block; width:300px; 
+		}
+		.bar:before, .bar:after   {
+  			content:'';
+  			height:2px; 
+  			width:0;
+  			bottom:1px; 
+  			position:absolute;
+  			background:#5264AE; 
+  			transition:0.2s ease all; 
+		}
+		.bar:before {
+  			left:50%;
+		}
+		.bar:after {
+  			right:50%; 
+		}
+
+		/* active state */
+		input:focus ~ .bar:before, input:focus ~ .bar:after {
+  			width:50%;
+		}
+		.highlight {
+			position: absolute;
+			height: 60%;
+			width: 100px;
+			top: 25%;
+			left:0;
+			pointer-events: none;
+			opacity: 0.5;
+		}
+		/* active state */
+		input:focus ~ .highlight {
+  			animation:inputHighlighter 0.3s ease;
+		}
+
+/* ANIMATIONS ================ */
+		@keyframes inputHighlighter {
+  			from  { background:#5264AE; }
+  			to    { width:0; background:transparent; }
+		}
+
+
+
+		button {
+  border: none;
+  background: #1abc9c;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px;
+  width: 100px;
+  color: white;
+  /*margin-left: 25px;*/
+  
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+
+}
+button:hover { 
+    transform: translateY(-1px);
+    box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2);
+    background: #43A047;
+  }
+
+h1 {
+	margin-left: 4px;
+	font-size:20px;
+	font-family: Georgia, serif;
+	color: #1abc9c;
+}
+
+.message {
+	margin-top: 8px;
+	font-size: 10px;
+	color: red;
+	font-family: Georgia, serif;
+}

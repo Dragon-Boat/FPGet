@@ -1,0 +1,27 @@
+{
+	"name":"FPGet",
+	"version":"0.1",
+	"description":"Film Post Get From DouBan Api",
+	"manifest_version":2,
+	"author":"sundaezhou@outlook.com",
+	"icons": {
+      "16": "images/launch16.png",
+      "32": "images/launch32.png",
+      "48": "images/launch48.png",
+      "128": "images/launch128.png"
+    },
+    "background": {
+      "scripts": ["jquery.min.js",
+      	"background.js"],
+      "persistent": false
+    },
+    "browser_action":{
+    	"default_popup":"popup.html",
+    	"default_icon":"images/launch128.png"
+    },
+    "permissions":[
+    	"downloads",
+    	"https://*.douban.com/",
+    	"notifications"
+    ]
+}
